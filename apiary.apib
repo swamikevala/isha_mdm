@@ -1,13 +1,13 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# Isha MDM
+# Isha MDM API
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+API for Isha Master Data Management (MDM) System
 
-## Questions Collection [/questions]
+## Contacts [/contacts]
 
-### List All Questions [GET]
+### List most recently added contacts [GET]
 
 + Response 200 (application/json)
 
@@ -33,7 +33,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             }
         ]
 
-### Create a New Question [POST]
+
+
+### Create a New Contact [POST]
 
 You may create your own question using this action. It takes a JSON
 object containing a question and a collection of answers in the
@@ -55,7 +57,7 @@ form of choices.
 
     + Headers
 
-            Location: /questions/2
+            Location: /contact/2
 
     + Body
 
@@ -78,3 +80,9 @@ form of choices.
                     }
                 ]
             }
+            
+## Contact [/contacts/{id}]
+
+### List most recently added contacts [GET]
+
++ Response 200 (application/json)
