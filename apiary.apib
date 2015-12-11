@@ -5,6 +5,45 @@ HOST: http://polls.apiblueprint.org/
 
 API for Isha Master Data Management (MDM) System
 
+# Get contacts [GET /contacts]
+# Get contacts by ids [GET /contacts{?ids}]
+# Get contact by id [GET /contacts/{id}]
+# Add contact [POST /contacts]
+# Update contact [PUT /contacts/{id}]
+
+# Match Contacts [GET /contacts/match{?q}]
+# Merge Contacts [POST /contacts/merge]
+# Suggest merged contact [GET /contacts/merge/suggest{?ids}]
+# Antimatch contacts [POST /contacts/merge/antimatch]
+
+# Get contact match groups [GET /contacts/match-groups]
+# Get matched contacts [GET /contacts/match-groups/{id}]
+# Add contact match group [POST /contacts/match-groups]
+# Remove contact match group [DELETE /match-groups/contact/{id}]
+
+# Get constants [GET /constants{?entityType}{&attribute,parentValue}]
+# Get countries [GET /countries]
+# Get systems [GET /systems]
+# Get system [GET /systems/{id}]
+
+# Get object lables [GET /object-labels]
+
+getConstants [GET]:                   mdm-server/api/constants?entityType=address&attribute=stateProvince&parentValue=india
+getCountryConstants:                   mdm-server/api/countries [GET]
+
+getSystemInfo:                             mdm-server/api/systems [GET]
+getSystemInfo:                             mdm-server/api/systems/12 [GET]
+
+getObjectLabels:                           mdm-server/api/object-labels?name=contactInfo [GET]
+
+
+
+
+
+
+
+
+
 ## Contacts [/contacts]
 
 ### List most recently added contacts [GET]
